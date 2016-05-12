@@ -5,45 +5,45 @@ import java.util.*;
 import it.infn.ba.indigo.chronos.client.utils.ModelUtils;
 
 public class Job {
-	private String name;
-	private String description;
-	private String command;
-	private List<String> arguments;
-	private Boolean shell;
-	private String epsilon;
-	private String executor;
-	private String executorFlags;
-	private Integer retries;
-	private String owner;
-	private String ownerName;
-	private Boolean async;
-	private Integer successCount;
-	private Integer errorCount;
-	private String lastSuccess;
-	private String lastError;
-	private Double cpus;
-	private Double mem;
-	private Double disk;
-	private Boolean disabled;
-	private Collection<String> uris;
-	private String schedule;
-	private String scheduleTimeZone;
-	private List<String> parents;
-	private String runAsUser;
-	private Container container;
-	private Boolean dataJob;
-	private List<EnvironmentVariable> environmentVariables;
-	private List<List<String>> constraints;
+  private String name;
+  private String description;
+  private String command;
+  private List<String> arguments;
+  private Boolean shell;
+  private String epsilon;
+  private String executor;
+  private String executorFlags;
+  private Integer retries;
+  private String owner;
+  private String ownerName;
+  private Boolean async;
+  private Integer successCount;
+  private Integer errorCount;
+  private String lastSuccess;
+  private String lastError;
+  private Double cpus;
+  private Double mem;
+  private Double disk;
+  private Boolean disabled;
+  private Collection<String> uris;
+  private String schedule;
+  private String scheduleTimeZone;
+  private List<String> parents;
+  private String runAsUser;
+  private Container container;
+  private Boolean dataJob;
+  private List<EnvironmentVariable> environmentVariables;
+  private List<List<String>> constraints;
 
-	public String getName() {
-		return name;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public String getDescription() {
+  public String getDescription() {
     return description;
   }
 
@@ -52,22 +52,22 @@ public class Job {
   }
 
   public String getCommand() {
-		return command;
-	}
+    return command;
+  }
 
-	public void setCommand(String command) {
-		this.command = command;
-	}
+  public void setCommand(String command) {
+    this.command = command;
+  }
 
-	public List<String> getArguments() {
-		return arguments;
-	}
+  public List<String> getArguments() {
+    return arguments;
+  }
 
-	public void setArguments(final List<String> arguments) {
-		this.arguments = arguments;
-	}
+  public void setArguments(final List<String> arguments) {
+    this.arguments = arguments;
+  }
 
-	public Boolean isShell() {
+  public Boolean isShell() {
     return shell;
   }
 
@@ -164,22 +164,22 @@ public class Job {
   }
 
   public Double getCpus() {
-		return cpus;
-	}
+    return cpus;
+  }
 
-	public void setCpus(Double cpus) {
-		this.cpus = cpus;
-	}
+  public void setCpus(Double cpus) {
+    this.cpus = cpus;
+  }
 
-	public Double getMem() {
-		return mem;
-	}
+  public Double getMem() {
+    return mem;
+  }
 
-	public void setMem(Double mem) {
-		this.mem = mem;
-	}
+  public void setMem(Double mem) {
+    this.mem = mem;
+  }
 
-	public Double getDisk() {
+  public Double getDisk() {
     return disk;
   }
 
@@ -196,12 +196,12 @@ public class Job {
   }
 
   public Collection<String> getUris() {
-		return uris;
-	}
+    return uris;
+  }
 
-	public void setUris(Collection<String> uris) {
-		this.uris = uris;
-	}
+  public void setUris(Collection<String> uris) {
+    this.uris = uris;
+  }
 
   public void addUri(String uri) {
     if (this.uris == null) {
@@ -210,7 +210,7 @@ public class Job {
     this.uris.add(uri);
   }
 
-	public String getSchedule() {
+  public String getSchedule() {
     return schedule;
   }
 
@@ -242,15 +242,15 @@ public class Job {
     this.runAsUser = runAsUser;
   }
 
-	public Container getContainer() {
-		return container;
-	}
+  public Container getContainer() {
+    return container;
+  }
 
-	public void setContainer(Container container) {
-		this.container = container;
-	}
+  public void setContainer(Container container) {
+    this.container = container;
+  }
 
-	public Boolean getDataJob() {
+  public Boolean getDataJob() {
     return dataJob;
   }
 
@@ -285,9 +285,9 @@ public class Job {
     this.constraints.add(constraint);
   }
 
-	@Override
-	public String toString() {
-		return ModelUtils.toString(this);
-	}
+  @Override
+  public String toString() {
+    return ModelUtils.toString(this);
+  }
 
 }

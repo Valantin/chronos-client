@@ -1,33 +1,37 @@
 package it.infn.ba.indigo.chronos.client;
 
-import javax.inject.Named;
+import java.util.Collection;
 
 import feign.RequestLine;
-import it.infn.ba.indigo.chronos.client.model.v1.GetJobsResponse;
+import feign.Param;
+import feign.Headers;
+
 import it.infn.ba.indigo.chronos.client.model.v1.Job;
 import it.infn.ba.indigo.chronos.client.utils.ChronosException;
 
 public interface Chronos {
 
   @RequestLine("GET /scheduler/jobs")
-  GetJobsResponse getJobs();
+  Collection<Job> getJobs();
 
   @RequestLine("GET /scheduler/jobs/search?name={name}")
-  GetJobsResponse getJob(@Named("name") String name);
+  Collection<Job> getJob(@Param("name") String name);
 
+  @Headers("Content-Type: application/json")
   @RequestLine("POST /scheduler/iso8601")
   void createJob(Job job) throws ChronosException;
 
+  @Headers("Content-Type: application/json")
   @RequestLine("POST /scheduler/dependency")
   void createDependentJob(Job job) throws ChronosException;
 
   @RequestLine("PUT /scheduler/job/{name}")
-  void startJob(@Named("name") String name) throws ChronosException;
+  void startJob(@Param("name") String name) throws ChronosException;
 
   @RequestLine("DELETE /scheduler/job/{name}")
-  void deleteJob(@Named("name") String name) throws ChronosException;
+  void deleteJob(@Param("name") String name) throws ChronosException;
 
   @RequestLine("DELETE /scheduler/task/kill/{name}")
-  void deleteJobTasks(@Named("name") String name) throws ChronosException;
+  void deleteJobTasks(@Param("name") String name) throws ChronosException;
 
 }

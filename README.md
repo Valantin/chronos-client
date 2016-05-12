@@ -48,7 +48,7 @@ GetJobsResponse jobsResponse = chronos.getJobs();
 The following example demonstrates how a new job can be created:
 ```
 Job job = new Job();
-job.setSchedule("R\/2016-04-27T17:22:00Z\/PT5M"):
+job.setSchedule("R/2016-04-27T17:22:00Z/PT5M");
 job.setName("dockerjob");
 Container container = new Container();
 container.setType("DOCKER");
