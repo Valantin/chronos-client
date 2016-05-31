@@ -10,6 +10,7 @@ public class Container {
   private Boolean forcePullImage;
   private String network;
   private Collection<Volume> volumes;
+  private Collection<Parameters> parameters;
 
   public String getType() {
     return type;
@@ -49,6 +50,14 @@ public class Container {
 
   public void setVolumes(Collection<Volume> volumes) {
     this.volumes = volumes;
+  }
+
+  public Collection<Parameters> getParameters() {
+    return parameters;
+  }
+
+  public void setParameters(Collection<Parameters> parameters) {
+    this.parameters = parameters;
   }
 
   @Override
