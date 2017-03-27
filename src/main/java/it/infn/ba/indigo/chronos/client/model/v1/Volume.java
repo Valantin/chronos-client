@@ -2,7 +2,12 @@ package it.infn.ba.indigo.chronos.client.model.v1;
 
 import it.infn.ba.indigo.chronos.client.utils.ModelUtils;
 
-public class Volume {
+import java.io.Serializable;
+
+public class Volume implements Serializable {
+
+  private static final long serialVersionUID = 4299892262923776898L;
+
   private String containerPath;
   private String hostPath;
   private String mode;

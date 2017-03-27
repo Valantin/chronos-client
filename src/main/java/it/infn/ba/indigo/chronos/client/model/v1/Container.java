@@ -1,10 +1,14 @@
 package it.infn.ba.indigo.chronos.client.model.v1;
 
-import java.util.Collection;
-
 import it.infn.ba.indigo.chronos.client.utils.ModelUtils;
 
-public class Container {
+import java.io.Serializable;
+import java.util.Collection;
+
+public class Container implements Serializable {
+
+  private static final long serialVersionUID = 4299892262923776898L;
+
   private String type;
   private String image;
   private Boolean forcePullImage;

@@ -1,10 +1,16 @@
 package it.infn.ba.indigo.chronos.client.model.v1;
 
-import java.util.*;
-
 import it.infn.ba.indigo.chronos.client.utils.ModelUtils;
 
-public class Job {
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class Job implements Serializable {
+
+  private static final long serialVersionUID = 4299892262923776898L;
+
   private String name;
   private String description;
   private String command;
